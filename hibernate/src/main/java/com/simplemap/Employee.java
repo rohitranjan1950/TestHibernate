@@ -4,13 +4,14 @@ import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-//@Table(name="Emp_git")
+@Table(name="simplemap_tab")
 public class Employee {
 
 	@Id
@@ -25,7 +26,10 @@ public class Employee {
 	private long phone;
 	private float ft;
 	private double salary;
+	
+	@Column(name="NAME_New" , length =5, nullable=false, unique = true )
 	private String name;
+	
 	private LocalDate date;
 	private LocalTime time;
 	private LocalDateTime dt_time;
